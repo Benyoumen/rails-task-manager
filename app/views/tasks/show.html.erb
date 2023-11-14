@@ -1,0 +1,38 @@
+  <%# <h2><%= @task.title</h2> %>
+  <%# <p><%= @task.details %>
+  <%# <p><%= @task.completed %>
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-6 offset-md-3">
+
+      <div class="card">
+
+        <div class="card-header">
+          <h1 class="task-title"><%= @task.title %></h1>
+        </div>
+
+        <div class="card-body">
+
+          <p class="task-details"><%= @task.details %></p>
+
+<div class="card-body">
+
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input">
+    <label class="form-check-label">Mark as Complete</label>
+  </div>
+
+  <p class="task-details">
+    <%= @task.details %>
+  </p>
+
+</div>
+
+<%= link_to "Add a new task", new_task_path(@task) %> |
+<%= link_to "Back to list", tasks_path %> |
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

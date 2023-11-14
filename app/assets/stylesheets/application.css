@@ -1,15 +1,44 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Center align contents */
+.task-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.task-details {
+  font-size: 18px;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* Checked */
+.form-check-input:checked ~ .task-details {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.badge {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.card {
+  text-align: center;
+}
+
+/* Fancy styles */
+
+.fab {
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.fa-trash {
+  color: #ccc;
+}
+
+.fa-trash:hover {
+  color: red;
+}
